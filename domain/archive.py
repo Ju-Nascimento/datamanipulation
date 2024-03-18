@@ -8,13 +8,13 @@ class Archive:
     def create_archive(self):
         dados = []
         while True:
-            nome = input("Digite seu nome: ")
+            nome = input("Digite seu nome ou digite sair para encerrar: ")
             if nome.lower() == 'sair':
                 break
 
             matricula = input("Digite sua matrícula: ")
             if matricula.isdigit():  # Verifica se a entrada contém apenas dígitos
-                matricula = int(matricula)  # Converte para inteiro se for válido
+                matricula = int(matricula)  # Converte para inteiro 
                 curso = input("Digite o seu curso: ")
                 dados.append([nome, matricula, curso])
             else:
