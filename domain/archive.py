@@ -11,12 +11,12 @@ class Archive:
 
     def create_archive(self):
 
-        with open(self.path_file, 'w', encoding="utf-8") as file:
+        with open(self.path_file, 'w', encoding="latin-1") as file:
 
             csvwriter = csv.writer(file, delimiter=';')
 
     def file_read(self):
-        with open(self.path_file, 'r', encoding="utf-8") as file:
+        with open(self.path_file, 'r', encoding="latin-1") as file:
             leitor = csv.reader(file, delimiter=';')
 
             next(leitor, None)
